@@ -1,15 +1,11 @@
-├── index.html
-├── style.css
-└── README.md
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Me | Deon</title>
-  <link rel="stylesheet" href="style.css">
+  <!-- ✅ Flask will serve CSS from the "static" folder -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
   <header>
@@ -48,66 +44,3 @@
   </footer>
 </body>
 </html>
-
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9f9fb;
-  color: #333;
-  line-height: 1.6;
-}
-
-header {
-  background: teal;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  font-size: 1.2rem;
-  margin-top: 5px;
-}
-
-main {
-  max-width: 800px;
-  margin: 20px auto;
-  padding: 0 20px;
-}
-
-section {
-  margin-bottom: 30px;
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-section h2 {
-  color: teal;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-ul li {
-  background: #e0f7f5;
-  margin: 5px 0;
-  padding: 10px;
-  border-radius: 6px;
-}
-
-footer {
-  text-align: center;
-  padding: 15px;
-  background: #222;
-  color: #bbb;
-}
